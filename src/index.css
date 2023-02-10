@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.866);
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 .App {
@@ -18,7 +18,7 @@ body {
 }
 
 .calc {
-  background-color: rgba(32, 1, 133, 0.289);
+  /* background-color: rgba(0, 51, 118, 0.502); */ 
   border-radius: 20px;
   min-height: 300px;
   max-width: 300px ;
@@ -28,12 +28,12 @@ body {
 }
 
 .display {
-  background-color: rgba(157, 164, 176, 0.417);
+  background-color: #3c454c8d;
   color: aliceblue;
   text-align: right;
   padding: 20px;
   padding-bottom: 10px;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 200;
   min-height: 60px;
 }
@@ -44,9 +44,10 @@ button {
   outline: none;
   font-size: 20px;
   padding: 16px;
-  color: rgb(213, 213, 213);
+  color: whitesmoke;
   transition: 0.8sec;
-  background-color: rgba(93, 161, 159, 0.515);
+  background-color: #3c454c8d;
+  
 }
 
 button:hover {
@@ -59,7 +60,7 @@ button:hover {
 }
 
 .operators button {
-  background-color: rgba(6, 248, 199, 0.377);
+  background-color: #3c454cd6 ;
   flex: auto ;
 }
 .digits {
@@ -69,4 +70,11 @@ button:hover {
 
 .digits button {
   flex: 1 1 33.3%;
+}
+.res {
+  color: rgba(147, 188, 223, 0.474);
+  font-size: 18px;
+}
+.del {
+  background-color: #3c454cd8;
 }

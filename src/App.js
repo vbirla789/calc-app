@@ -6,7 +6,7 @@ function App() {
   const dig =() => {
     const digArr =[]
 
-    for( let i=0; i<10; i++){
+    for( let i=1; i<10; i++){
       digArr.push 
         (<button key={i} onClick={() => updateCalc(i.toString())}> {i} </button>
       )}
@@ -28,7 +28,8 @@ const updateCalc = value => {
   setCalc(calc + value)
 
   if(!ops.includes(value)){
-    setResult(eval(calc + value))
+    setResult(eval(calc+ value )
+    )
   }
   
 }
@@ -36,11 +37,10 @@ const updateCalc = value => {
 const calculate =()=>{
   setCalc(eval(calc).toString())
 }
+
 const del=()=>{
-  if(!calc ===""){
-    return
-  }
   setCalc('')
+  setResult('')
 }
 
 
@@ -49,7 +49,7 @@ const del=()=>{
       <div className="calc">
 
         <div className="display">
-          { calc || ''} { result ? <span>({result})</span> : ''}
+          { calc || ''} { result ? <span className="res">({result})</span> : ''}
         </div>
 
         <div className="operators">
@@ -61,9 +61,11 @@ const del=()=>{
 
         <div className="digits">
           {dig()}
+          
           <button onClick={() => updateCalc('.')}>.</button>
+          <button onClick={() => updateCalc('0')}>0</button>
           <button onClick={del}>del</button>
-          <button onClick={calculate}>=</button>
+          <button className="del" onClick={calculate}>=</button>
         </div>
 
       </div>
